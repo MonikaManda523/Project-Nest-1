@@ -1,0 +1,62 @@
+<h1>Health And Nutrition</h1>
+
+<body>
+  <style>
+    body{font-family:Arial,Helvetica,Sans-serif;}
+
+    .navbar a{float:right;padding:12px;color:rgb(230, 65, 65);text-decoration:none;font-size:17px;}
+
+.navbar a:hover{background-color:hsl(0, 17%, 15%);}
+
+.active{background-color:#e0bd0f;}
+
+
+@media screen and(max-width:500px){.navbar a{float:none;display:block}}
+    
+  </style>
+  <body>
+    <div class="navbar"> 
+      <a href="{{ url_for('Home') }}">Home</a> 
+      <a href="{{ url_for('signup') }}">Signup</a> 
+      <a href="{{ url_for('login') }}">Login</a>  
+      <a href="{{ url_for('Recipes') }}">Recipes</a>
+      <a href="{{ url_for('Search') }}">Search</a> 
+      <a href="{{ url_for('Contact') }}">Contact</a> 
+   </div>
+
+
+  <body style="background-color:rgba(17, 126, 92, 0.329)">
+  
+</body>
+<form id="mealForm" onsubmit="return redirectToSelectedMeal()">
+  <label for="myhouse">Choose your Meals:</label>
+  <input list="Diet" id="myhouse" name="myhouse" placeholder="type here..." />
+  <datalist id="Diet">
+    <option value="Recipes">
+    <option value="Lunch">
+    <option value="Dinner">
+    <option value="Juice">
+  </datalist>
+  <br><br>
+  <button type="submit">Search</button>
+</form>
+
+<script>
+  function redirectToSelectedMeal() {
+      var selectedMeal = document.getElementById('myhouse').value.toLowerCase();
+      if (selectedMeal === 'Recipes') {
+          window.location.href = "{{ url_for('Recipes') }}";
+      } else if (selectedMeal === 'lunch') {
+          window.location.href = "{{ url_for('Lunch') }}";
+      } else if (selectedMeal === 'dinner') {
+          window.location.href = "{{ url_for('Dinner') }}";
+      } else if (selectedMeal === 'juice') {
+          window.location.href = "{{ url_for('Juices') }}";
+      } else {
+          alert("Invalid meal choice. Please select a valid meal.");
+      }
+      return false;
+  }
+</script>
+</body>
+</html>

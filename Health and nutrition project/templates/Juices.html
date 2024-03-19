@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Recipes Page</title>
+</head>
+<nav>
+  <!-- Navigation links or buttons for various recipe categories -->
+  <ul>
+    <li><a href={{url_for('Home')}}>Home</a></li>
+    <li><a href={{url_for('Lunch')}}>Lunch</a></li>
+    <li><a href={{url_for('Dinner')}}>Dinner</a></li>
+    <li><a href={{url_for('Juices')}}>Juices</a></li>
+  </ul>
+</nav>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ea9173;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #a5d1e6;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.recipe-card {
+  border: 1px solid #e2a370;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.recipe-card h3 {
+  margin-top: 0;
+}
+
+footer {
+  background-color: #9ddac6;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+<main>
+  <section id="juices">
+    <h1>Juice Recipes</h1>
+    <!-- Recipe cards for juice recipes -->
+    <div class="recipe-card">
+      <h3>Pomegranate juice</h3>
+      <img src="https://img.freepik.com/premium-photo/glass-pomegranate-juice-splash-sliced-pomegranate-generative-ai_3535-2432.jpg" alt="nutrition.com" width="350" height="250"><br><br>
+      <p>Ingredients:pomegranate, sparkling seltzer water, lemon wedge squeezed, ice...</p>
+      <p>Instructions:<br>
+         step 1:Add ice to a glass, pour in pomegranate juice, seltzer water and lemon</p><br>
+      <h3>Orange juice</h3>
+      <img src="https://media.istockphoto.com/id/537837754/photo/orange-juice-splash.jpg?s=612x612&w=0&k=20&c=twbr5N3vTUl9Qw_cerGXX9zQlkTVa7ICatdUqyxgsvg=" alt="nutrition.com" width="350" height="250"><br><br>
+      <p>Ingredients:oranges, lemon, nectarine, apple, fresh ginger, carrot, fresh mint, filtered water...</p>
+      <p>Instructions:<br>
+          step 1:If using a juicer, add all ingredients to the juicer and press (omit water). Otherwise, squeeze orange and lemon juice into a blender as the pulp can make the juicing process more difficult<br>
+          step 2:Next add nectarine, apple, ginger, carrots, and mint (optional). Top with filtered water (start with the lesser quantity), cover and blend until combined. You don’t want your blender to get the juice too hot in temperature so be careful not to over-blend – it shouldn’t take more than 30 seconds.<br>
+          step 3:Drape a clean, thin towel over a large mixing bowl and carefully pour over the juice and pulp. Then gather the corners and begin extracting the juice, leaving the pulp behind. Continue squeezing until all juice is extracted. You can either compost the pulp or add it to baked goods<br>
+          step 4:Enjoy the juice fresh. Cover and refrigerate leftovers for 2-3 days, though best in the first 12-24 hours for mineral and vitamin content...<br></p><br>
+      <h3>Kiwi juice</h3>
+      <img src="https://media.istockphoto.com/id/520294937/photo/glass-of-kiwi-juice-with-fresh-fruits.jpg?s=612x612&w=0&k=20&c=CHVGWywCgHPMjxC6AOF3bT6HyKKLVSxXMplTD6Zq_3U=" alt="nutrition.com" width="350" height="250"><br><br>
+      <p>Ingredients:kiwis, cold water, sweetener</p>
+      <p>Instructions:<br>
+          step 1:To the canister of a blender, add kiwis, 6 cups water, optional sweetener, and blend on high speed until kiwis have broken down, about 30 seconds, or as long as desired<br>
+          step 2:Taste to check sweetness level and make any adjustments if necessary. If you prefer a thinner beverage, add additional water to thin out and blend for a few seconds.<br>
+          step 3:Pour into glasses and serve immediately. Optionally garnish with a few thinly sliced kiwi on top.<br>
+          step 4:Drink will keep airtight in the fridge for up to 4 days...<br></p><br>
+      <h3>Watermelon juice</h3>
+      <img src="https://media.istockphoto.com/id/502663599/photo/watermelon-refreshment.jpg?s=612x612&w=0&k=20&c=3tak-flDFbnhUchgfIAPYKLMDmONHegod8Nc_PrDQxA=" alt="nutrition.com" width="350" height="250"><br><br>
+      <p>Ingridents:Sweet watermelon, lime...</p>
+      <p>Instructions:<br>
+          step 1:Slice the watermelon in half. Using a big spoon, scoop chunks of sweet watermelon into the blender. Discard the rind.<br>
+          step 2:Blend the watermelon until it is totally pulverized. This shouldn’t take more than a minute. For extra flavor, squeeze the juice of one small lime into the blender and blend for a few seconds.<br>
+          step 3:If your watermelon is notably pulpy or seeded, pour the mixture through a fine mesh strainer into a pitcher. If not, you can pour it directly into glasses filled with ice<br>
+          step 4:Watermelon juice will keep in the refrigerator, covered, for up to 4 days. The juice will separate over time; stir it with a spoon to recombine...<br></p><br>
+      <h3>Apple juice</h3>
+      <img src="https://media.istockphoto.com/id/1038093092/photo/homemade-cider-from-ripe-apples.jpg?s=1024x1024&w=is&k=20&c=UwTXex8hEemL-qDY6DVgd4wD_rvvQWmb_3zaBoA1q5w=" alt="nutrition.com" width="350" height="250"><br><br>
+      <p>Ingredients:chopped apples, peeled and chopped oranges</p>
+      <p>Instructions:<br>
+         step 1:Blend the apple and orange and mint together till smooth<br>
+         step 2:Pour the mixture into two juice glasses.<br>
+         step 3:Top each one with 1 tsp of low fat cream and garnish them with the scooped musk melon balls...<br></p><br>
+      <h3>Strawberry lemonade</h3>
+      <img src="https://media.istockphoto.com/id/1163888909/photo/refreshing-strawberry-mint-and-lemon-iced-tea-or-lemonade-in-glasses.jpg?s=1024x1024&w=is&k=20&c=PMebYcza-2O96bv3TSvPG5mLVova-Q21DEW8iifH5Xo=" alt="nutrition.com" width="350" height="250"><br><br>
+
+      <p>Ingredients:strawberries, lemons, sugar, water</p>
+      <p>Instructions:<br>
+          step 1:Puree the strawberries. Use a blender or food processor to puree the strawberries. Strain them through a fine mesh sieve to remove seeds, if you want.<br>
+          step 2:Make a simple syrup. Add sugar and 2 cups of water to a saucepan. Bring to a simmer and stir until sugar is dissolved.  Remove from heat and cool to room temperature.<br>
+          step 3:Juice your lemons. Strain the lemon juice through a fine mesh sieve into a pitcher.<br>
+          step 4:Combine syrup, lemon juice, and pureed strawberries. Stir to combine...<br></p><br>
+          </div>
+          </section>
+</main>
+</body>
+</html>

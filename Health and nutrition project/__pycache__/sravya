@@ -1,0 +1,246 @@
+from flask import Flask, request, render_template, redirect, url_for
+from pymongo import MongoClient
+
+app = Flask(__name__)
+app.secret_key = 'your_secret_key'  # Replace with a more secure secret key
+
+# MongoDB configuration
+client = MongoClient('mongodb://localhost:27017')
+db = client.cardealership
+users_collection = db.users
+
+
+
+
+rom flask import Flask, render_template, request
+import pymongo
+
+app = Flask(__name__)
+
+# MongoDB connection
+client = pymongo.MongoClient("mongodb://localhost:27017/Mark")
+db = client["Mark"]
+collection = db["users"]  # Collection to store user data
+
+
+
+
+
+from flask import Flask,render_template,request
+from pymongo import MongoClient
+app = Flask(__name__)
+
+
+# MongoDB connection
+client = MongoClient("mongodb://localhost:27017/Mark")
+db = client["Mark"]
+collection = db["point"]  # Collection to store user data
+
+
+@app.route('/')
+def Homepage():
+    return render_template('Home page.html') 
+
+@app.route('/Contact', methods=['POST'])
+def Contact(): 
+   
+    # Retrieve form data
+    name = request.form['name']
+    email = request.form['email']
+    message = request.form['message']
+
+    # Store the data in MongoDB
+    contacts_collection = db['contact']
+    contact_data = {
+        'name': name,
+        'email': email,
+        'message': message
+    }
+    contacts_collection.insert_one(contact_data)
+    return render_template('Contact.html')
+
+@app.route('/Recipes')
+def Recipes():
+    # Retrieve data from MongoDB
+    recipes_data = collection.find()
+    return render_template('Recipes.html', recipes=recipes_data)
+
+    
+
+@app.route('/Lunch')
+def Lunch():
+    lunch_recipes = db.lunch_recipes.find()
+    return render_template('Lunch.html', lunch_recipes=lunch_recipes)
+    
+
+@app.route('/Dinner')
+def Dinner():
+    dinner_recipes = db.dinner_recipes.find()
+    return render_template('Dinner.html', dinner_recipes=dinner_recipes)
+   
+
+@app.route('/Juices')
+def Juices():
+
+    # Fetch juice recipes from the database
+    juice_recipes = juice_recipes.find()
+    return render_template('Juices.html', juice_recipes=juice_recipes)
+
+
+@app.route('/search_results', methods=['POST'])
+def search_results():
+    meal_choice = request.form['myhouse']
+    
+    # Assuming you have a collection called 'recipes'
+    recipes_collection = db['recipes']
+
+    # Query the database to retrieve recipes based on meal choice
+    results = recipes_collection.find({'meal_type': meal_choice})
+
+    # Process the results and pass them to the template for display
+    # You would typically format and display the results in your HTML
+    # For simplicity, we'll just print the results here
+    for result in results:
+        print(result)
+
+    # You can modify this to render a template with the search results
+    return "Search results displayed in the console. Modify to display in HTML."
+
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+
+    if request.method == 'POST':
+        # Retrieve data from the signup form
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+
+        # Create a user document
+        user = {
+            "username": username,
+            "email": email,
+            "password": password
+        }
+
+        # Insert the user document into the MongoDB collection
+        collection.insert_one(user)
+
+        # You can add further logic like redirecting to a profile page or login page after signup
+
+    
+
+    return render_template('signup.html') 
+
+    
+
+@app.route('/Login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # Retrieve username and password from the form
+        username = request.form['username']
+        password = request.form['password']
+
+        # Assuming you have a collection called 'point'
+        users_collection = db['piont']
+
+        # Query the database to check if the username and password match
+        user = users_collection.find_one({'username': username, 'password': password})
+
+        if user:
+            # Authentication successful, redirect to a new page or perform actions
+            return redirect('/dashboard')  # Change the URL to your dashboard page
+
+    return render_template('Login page.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+
+from flask import Flask, render_template, request, redirect,url_for, session ,flash 
+from pymongo import MongoClient
+
+app = Flask(__name__)
+
+# Connect to MongoDB
+client = MongoClient('mongodb://localhost:27017/Mark')
+db = client['Mark']   
+collection = db['point'] 
+
+
+@app.route('/')
+def Home():
+    return render_template('Home page.html')
+
+@app.route('/Recipes')
+def Recipes():
+    return render_template('Recipes.html')
+
+@app.route('/Contact')
+def Contact():
+    return render_template('Contact.html')
+
+@app.route('/Lunch')
+def Lunch():
+    return render_template('Lunch.html')
+
+@app.route('/Dinner')
+def Dinner():
+    return render_template('Dinner.html')
+
+@app.route('/Juices')
+def Juices():
+    return render_template('Juices.html')
+
+@app.route('/Search')
+def Search():
+    return render_template('Search.html')
+
+
+import hashlib  # Import the hashlib module
+
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+
+        # Hash the password using SHA-256
+        hashed_password = hashlib.sha256(password.encode()).hexdigest()
+
+        # Check if the username already exists in the database
+        if username.find_one({'username': username}):
+            flash('Username already exists', 'error')
+            return redirect('/signup')
+
+        # Insert the user data into the database
+        user_data = {
+            'username': username,
+            'email': email,
+            'password': hashed_password
+        }
+        username.insert_one(user_data)
+
+        return f'Account created successfully'
+
+    return render_template('signup.html')
+
+
+
+
+
+
+
+@app.route('/Breakfast')
+def Breakfast():
+    return render_template('Breakfast.html')
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

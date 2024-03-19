@@ -1,0 +1,191 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Recipes Page</title>
+</head>
+<style>
+  body{font-family:Arial,Helvetica,Sans-serif;}
+
+  .navbar a{float:right;padding:12px;color:rgb(195, 71, 71);text-decoration:none;font-size:17px;}
+
+.navbar a:hover{background-color:hsl(0, 17%, 15%);}
+
+.active{background-color:#e0bd0f;}
+
+
+@media screen and(max-width:500px){.navbar a{float:none;display:block}}
+  
+</style>
+
+<body>
+  <div class="navbar">  
+    <a href={{url_for('signup')}}>Signup</a> 
+    <a href={{url_for('login')}}>Login</a>
+    <a href={{url_for('Recipes')}}>Recipes</a>
+    <a href={{url_for('Search')}}>Search</a>
+    <a href={{url_for('Contact')}}>Contact</a>
+  
+    <a href="{{ url_for('Home') }}">Home</a>
+  </div>
+
+
+  <header>
+    <head>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  
+      
+    <body>
+      <h1 class="stylish-heading">HEALTHY RECIPES</h1>
+      </body>
+  </header>
+  <style>
+    .stylish-heading {
+    font-family: 'Arial', sans-serif;
+    color: #8b285e; /* Change the text color to your preferred color */
+    text-transform: uppercase; /* Convert text to uppercase */
+    text-align: center; /* Center-align text */
+    letter-spacing: 2px; /* Adjust letter spacing */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+  </style>
+
+  <nav>
+    <!-- Navigation links or buttons for various recipe categories -->
+    <ul>
+      <li><a href={{url_for('Breakfast')}}>Breakfast</a></li>
+      
+      <li><a href={{url_for('Lunch')}}>Lunch</a></li>
+      <li><a href={{url_for('Dinner')}}>Dinner</a></li>
+      <li><a href={{url_for('Juices')}}>Juices</a></li>
+    </ul>
+  </nav>
+  <style>
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #ea9173;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav {
+    background-color: #a5d1e6;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  .recipe-card {
+    border: 1px solid #e2a370;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-card h3 {
+    margin-top: 0;
+  }
+  
+  footer {
+    background-color: #9ddac6;
+    padding: 10px;
+    text-align: center;
+  }
+  </style>
+
+  <main>
+    <section id="breakfast">
+      <h1>Breakfast Recipes</h1>
+      <!-- Recipe cards for breakfast recipes -->
+      <div class="recipe-card">
+        <h3>veggie omlette</h3>
+      <img src="https://thehalallife.co.uk/wp-content/uploads/2020/02/Omelette-c-1.jpg" alt="nutrition.com" width="300" height="250"><br><br>
+        <p>Ingredients: Egg, veggies, salt, pepper, butter...</p>
+        <p>Instructions:<br> 
+            Step 1:prep the eggs:crack the eggs into a bowl<br>
+            step 2: add some veggies<br>
+            step 3:add some pinch of salt and pepper and stir the batter<br>
+            step 4:melt the butter in a nonstick skkilet over medium-low heat<br>
+            step 5:add the prepared batter to the skillet and cook without stirring until the edges begin the set<br>
+            step 6:wait until the base firms up ,flip it to the other side<br>
+            step 7:put the omlette on the plate when it is cooked ...</p><br>
+            <h3>greek yogurt parfait</h3>
+            <img src="https://totaste.com/wp-content/uploads/2022/06/greek-yogurt-parfait.jpeg" alt="nutrition.com" width="350" height="250"><br><br>
+            <p>Ingredients:greek yogurt,granola,mixed berries,honey,maple syrup...</p>
+            <p>Instructions:<br> 
+                step 1:in a glass bowl,layer greek yogurt,granola,and mixed berries<br>
+                step 2:Drizzle honey or maple syrup over the top for added sweetness,if desired<br>
+                step 3:Repeat the layers until the glass or bowl is filled<br>
+                step 4:Serve  immediately and enjoy a protien-packed,nutrient-rich breakfast...</p><br>
+            <h3>Chia seed pudding</h3>
+            <img src="data:image/jpeg;base64,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" alt="nutrition.com" width="300" height="250"><br><br>
+            <p>Ingridents:chia seeds ,almond milk ,honey or maple syrup ,fresh fruits ,nuts and seeds...</p>
+            <p>Instructions:<br>
+            Step 1:In a bowl,mix chia seeds and almond milk.Stir well to prevent clumping<br>
+            Step 2:Add honey or maple syrup and mix again.Let it sit for 5-10 minutes and then stir again to break up any lumps<br>
+            step 3:Refrigirate the mixture for at least 2-3 hours or overnight until it thickens into a pudding-like consistency<br>
+            step 4:Serve in a bowl or jar,and top with fresh fruits,nuts and seeds...</p><br>
+            <h3>Banana & tahini porridge</h3>
+            <img src="https://summeryule.com/wp-content/uploads/2019/08/tahini-banana-overnight-oats-recipe-square-image.jpeg" alt="nutrition.com" width="350" height="250"><br><br>
+            <p>Ingredients:tahini ,milk ,porridge oats ,bananas ,sliced seeds ,sesame seeds...</p>
+            <p>Instructions:<br>
+               step 1:Mix the tahini with 1 tbsp milk and 1 tbsp water<br>
+               step 2:Put the oats, 1 sliced banana, cardamom, 100ml milk and 300ml water in a pan with a pinch of salt<br>
+               step 3:Cook over a medium heat for 5 mins, stirring, until creamy and hot<br>
+               step 4:Divide between two bowls<br>
+               step 5:Pour over the remaining milk,then top with the remaining sliced banana<br>
+               step 6:Drizzing over the tahininmixture and sprinkle over the toasted sesame seeds...<br></p><br>
+           <h3>Healthy pancakes</h3>
+           <img src="https://thebigmansworld.com/wp-content/uploads/2020/12/healthy-pancakes-recipe.jpg" alt="nutrition.com" width="350" height="250"><br><br>
+           <p>Ingredients:self-raising flour, whole meal, whole grain flour, eggs, skimmed milk, berries, yogurt...</p>
+           <p>Instructions:<br>
+               step 1:Shift the flours into a bowl or wide jug and tip any bits in the sieve back into the bowl<br>
+               step 2:Add the egg yolks and a splash of milk then stir to a thick paste. Add the remaining milk a little at a time so you don’t make lumps in the batter<br>
+               step 3:Whisk the egg whites until they stand up in stiff peaks, then fold them carefully into the batter – try not to squash out all the air<br>
+               step 4:Heat a non-stick pan over a medium heat and pour in enough batter to make a pancake about 10 cm across. Cook for just under a minute until bubbles begin to pop on the surface and the edges are looking a little dry<br>
+               step 5:Carefully turn the pancake over. If it is a bit wet on top, it may squirt out a little batter as you do so. In that case, leave it on the other side a little longer. Keep warm while you make the remaining pancakes. Serve with your favourite healthy toppings...<br></p><br>
+          <h3>Lemon rice</h3>
+          <img src="https://www.thespruceeats.com/thmb/4IX1aOpXF-X2yzc22MJLI062WTA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lemon-rice-recipe-5213271-hero-01-e74de504d7364ac499ef96f804253b05.jpg" alt="nutrition.com" width="350" height="250"><br><br>
+          <p>Ingredients:Lemon, kosher salt, canola oil, black mustard seeds, cashews/peanuts, garlic, green chilli, cumin seeds, curry leaves, chana dal, urad dal, turmeric, basmati rice...</p>
+          <p>Instructions:<br>
+              step 1:Combine lemon (or lime) juice and salt in a small bowl, stirring until dissolved.<br>
+              step 2:Heat oil in a wide large pot over medium-high heat until hot but not smoking. Sprinkle in a few mustard seeds to test the oil--it's hot enough when the seeds sizzle and pop.<br>
+              step 3:Once hot, reduce heat to medium. Quickly add the remaining mustard seeds, nuts, garlic, chile pepper, cumin seeds and curry leaves, chana dal and urad dal (if using), covering the pan as needed to contain any splattering<br>
+              step 4:Cook, stirring, until the nuts are lightly brown, 2 to 4 minutes.<br>
+              step 5:Remove from heat and stir in turmeric, rice and the juice mixture...</p><br> 
+</div>
+
+      <!-- Add more recipe cards as needed -->
+</section>
+</div>
+</section>
+</main>
+</body>
+</html>

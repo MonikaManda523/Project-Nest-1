@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <body>
+    <style>
+        /* Existing styles here */
+       
+        .container {
+            margin: 20px;
+        }
+
+        .container form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .container form h2 {
+            text-align: center;
+        }
+
+        .container form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .container form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .container form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #e0bd0f;
+            color: #fff;
+            border: none;
+        }
+
+        .container form button:hover {
+            background-color: #d4aa0b;
+        }
+    </style>
+</head>
+
+<body style="background-color:rgba(238, 203, 146, 0.329)">
+  
+<body>
+
+<div class="navbar"> 
+    <!-- Navbar links -->
+</div>
+<style>
+    body{font-family:Arial,Helvetica,Sans-serif;}
+
+    .navbar a{float:right;padding:12px;color:rgb(235, 74, 74);text-decoration:none;font-size:17px;}
+
+.navbar a:hover{background-color:hsl(0, 17%, 15%);}
+
+.active{background-color:#e0bd0f;}
+
+
+@media screen and(max-width:500px){.navbar a{float:none;display:block}}
+    
+  </style>
+      
+  <body>
+    <div class="navbar">
+      <p><a href="{{ url_for('signup') }}">Signup</a></p>
+      <p><a href="{{ url_for('Home') }}">Home</a></p> 
+      <p><a href="{{ url_for('login') }}">Login</a></p>
+      <p><a href="{{ url_for('Recipes') }}">Recipes</a></p>
+      <p><a href="{{ url_for('Search') }}">Search</a></p> 
+      <p><a href="{{ url_for('Contact') }}">Contact</a></p>
+       
+      
+      
+    </div>
+  </body>
+
+  <div class="container">
+    <form action="/signup" method="post">
+        <h2>Sign Up</h2>
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">SUBMIT</button>
+    </form>
+    <div class="success-message" id="successMessage"></div>
+</div>
+
+
+</body>
+</html>

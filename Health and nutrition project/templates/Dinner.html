@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Recipes Page</title>
+</head>
+<nav>
+  <!-- Navigation links or buttons for various recipe categories -->
+  <ul>
+   
+    <li><a href={{url_for('Home')}}>Home</a></li>
+    <li><a href={{url_for('Lunch')}}>Lunch</a></li>
+    <li><a href={{url_for('Dinner')}}>Dinner</a></li>
+    <li><a href={{url_for('Juices')}}>Juices</a></li>
+  </ul>
+</nav>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ea9173;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #a5d1e6;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.recipe-card {
+  border: 1px solid #e2a370;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.recipe-card h3 {
+  margin-top: 0;
+}
+
+footer {
+  background-color: #9ddac6;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+<section id="dinner">
+  <h1>Dinner Recipes</h1>
+  <!-- Recipe cards for dinner recipes -->
+  <div class="recipe-card">
+    <h3>vegetable pulao</h3>
+    <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/04/veg-pulao-recipe.jpg" alt="nutrition.com" width="350" height="250"><br><br>
+    <p>Ingredients:Spices, ginger garlic paste, herbs, rice, mixed vegetables ...</p>
+    <p>Instructions:<br>
+       step 1:Add 2 tbsp oil/ghee to a cooker or pot,add whole spices like 1 bay leaf,2 inch cinnamon,4 cloves,4 green cardamom,1/2 to 3/4 teaspoon shahi jeera or jeera,1 star anise,1 pinch nutmeg,little dagad phool,1 smallstrand mace<br>
+       step 2:When the spices begin to sizzle,add one thinly sliced onions and then 1 to 2slit green chilies saute them well<br>
+       step 3:When the onions turn golden add 1 and 1/2 teaspoon ginger garlic paste<br>
+       step 4:Saute well until the raw smell of ginger garlic disappears.donot burn<br>
+       step 5:Add mixed veggies and chopped mint/pudina.I use peas,beans and carrots most of the times.You can also use potatoes and a handful of split cashews or softend soya chunks if you like<br>
+       step 6:Next saute everything well until the mint smells good.Usually it takes about 2 to 3 minutes<br>
+       step 7:Pour 2 and 1/2 cups water if making in cooker and then add 1/2 teaspoon salt as well.If cooking in a pot,pour 3 cups water<br>
+       step 8:Bring the water to a rolling boil,then add soaked&drained rice.Ensure there is no water in the rice,otherwise the veg pulao will turn mushy ...<br></p><br>
+       <h3>Chicken and veggies stir fry</h3>
+       <img src="https://www.cookingclassy.com/wp-content/uploads/2019/12/chicken-stir-fry-1-1024x1536.jpg" alt="nutrition.com" width="300" height="250"><br><br>
+       <p>Ingredients:chicken stock,soya sauce,1tbsp pure honey,toasted sesame oil,cornstarch,boneless chicken tighs,canola oil,snap peas,red pepper,onion,mushrooms,carrot,baby corn,ginger,garlic,sliced scallions,warm rice...</p>
+       <p>Instructions:<br>
+           step 1:Whisk together stock, soy sauce, honey, sesame oil, and cornstarch in a bowl until cornstarch is dissolved<br>
+           step 2:Season chicken with salt and pepper. Heat oil in a large skillet over high heat. Add chicken and cook, stirring occasionally, until cooked through, 3 to 4 minutes; transfer to a plate using tongs. Reduce heat to medium-high<br>
+           step 3:Add vegetables and season with salt. Cook, stirring often, until vegetables are crisp-tender, 2 to 3 minutes (you can add a few tablespoons of water if pan starts to get too dark).<br>
+           step 4:Add ginger and garlic. Cook, stirring, until fragrant, 30 seconds to 1 minute.<br>
+           step 5:Whisk sauce and add to pan with chicken. Cook, stirring, until sauce is thickened, about 1 minute.<br>
+           step 6:Serve over rice topped with sesame seeds and scallions...<br></p><br>
+        <h3>Roasted sweet potato </h3>
+        <img src="https://www.foodnetwork.com/content/dam/images/food/fullset/2011/8/30/0/cc-armendariz_roasted-sweet-potatoes-with-honey-cinnamon-recipe-02_s4x3.jpg" alt="nutrition.com" width="350" height="250"><br><br>
+        <p>Ingredients:Unsalted butter, sweet potatoes, brown sugar, flour, chopped toasted pecans...</p>
+        <p>Instructions:<br>
+            step 1:Preheat oven to 375°F. Lightly butter a 9- by 13-inch baking dish. Arrange half the sweet potatoes in one layer, overlapping as necessary, in prepared baking dish<br>
+            step 2:Top with 1/4 cup melted butter and 2 tablespoons sugar. Season with salt. Repeat with a second layer of sweet potatoes, butter, sugar, and salt.<br>
+            step 3:Combine flour, pecans, 1/2 teaspoon salt, remaining 1/2 cup butter, and remaining 1/2 cup sugar in a bowl.<br>
+            step 4:Stir with a fork until clumps form. Sprinkle on top of potatoes.<br>
+            step 5:Bake until potatoes are soft when pierced with a knife, 55 to 65 minutes, covering with foil the last 10 minutes, if necessary, to prevent over-browning. Serve warm...<br></p><br>
+        <h3>Green beans with almonds and vermouth</h3>
+        <img src="https://res.cloudinary.com/hksqkdlah/image/upload/25459_sfs-green-beans-sauteed-shallots-and-vermouth-3.jpg" alt="nutrition.com" width="350" height="250"><br><br>
+        <p>Ingredients:Kosher salt and freshly ground black pepper, haricots verts, unsalted butter, silvered almonds, dry vermouth...</p>
+        <p>Instructions:<br>
+            step 1:Bring a large pot of salted water to a boil. Add beans and cook until crisp-tender, 2 to 4 minutes.<br>
+            step 2:Drain and rinse under cold water<br>
+            step 3:Melt butter in a large skillet over medium heat. Cook, stirring occasionally, until golden brown, 1 to 3 minutes.<br>
+            step 4:Add shallot and cook, stirring, 1 minute. Add almonds and cook, stirring, until golden brown and fragrant, 3 to 4 minutes.<br>
+            step 5:Stir in haricots verts and vermouth. Cook until haricots verts are warm and liquid is slightly reduced, 1 to 2 minutes<br>
+            step 6:Season with salt and pepper...<br></p><br>
+        <h3>Chapathi egg curry</h3>
+        <img src="https://thumbs.dreamstime.com/z/homemade-delicious-egg-roast-chapati-traditional-cuisines-tasty-spicy-egg-curry-chapathi-cooked-exotic-indian-235157732.jpg" alt="nutrition.com" width="350" height="250"><br><br>
+        <p>Ingredients:garlic, ginger, sunflower oil, onion, turmeric, coriander, kashmiri chilli powder, kosher salt, water, eggs, paratha breads...</p>
+         <p>Instructions:<br>
+             step 1:Combine garlic and ginger in a bowl; press with a spoon to make a paste.<br>
+             step 2:Heat oil in a large nonstick skillet over medium-high heat. Add onion, reduce heat to medium and cook, stirring, until softened, 3 to 4 minutes<br>
+             step 3:Stir in turmeric; cook, stirring occasionally, until the onion is light brown, 5 to 7 minutes more<br>
+             step 4:Stir in the garlic-ginger paste, coriander, chili powder and salt. Stir in water, partially cover and cook until the water evaporates, about 5 minutes.<br>
+             step 5:Add eggs and cook, stirring constantly, until almost set, 4 to 6 minutes. Serve rolled in paratha (or tortillas) with cilantro, if desired...<br></p><br>
+        <h3>chicken tikka masala</h3>
+        <img src="https://media.istockphoto.com/id/1093661590/photo/traditional-indian-dish-chicken-tikka-masala-with-spicy-curry-meat-in-bowl-basmati-rice-bread.jpg?s=612x612&w=0&k=20&c=DCwxqEciOTaN14A13ym6F4p2UnprhNarn7OwIaOLNNo=" alt="nutrition.com" width="350" height="250"><br><br>
+        <p>Ingredients:canola oil, boneless chicken, onion, no salt added tomato paste, turmeric, garam masala, cayenne pepper, chicken stock, heavy cream, kosher salt, black pepper, fresh cilantro, brown rice...</p>
+        <p>Instructions:<br>
+            step 1:Heat oil in a large, heavy pot over high. Add chicken; cook, turning occasionally, until browned, 5 to 6 minutes<br>
+            step 2:Add onion, garlic and ginger; cook, stirring constantly, 2 minutes.<br>
+            step 3:Add tomato paste, turmeric, garam masala and cayenne; cook, stirring constantly, until spices are toasted and fragrant, about 2 minutes.<br>
+            step 4:Stir in tomato puree, stock, cream, salt and pepper. Bring to a simmer over medium-high.<br>
+            step 5:Reduce heat to medium and simmer, stirring occasionally, until sauce is thickened slightly, about 10 minutes. Stir in cilantro; serve over rice...<br></p><br>
+      </div>
+
+  <!-- Add more recipe cards as needed -->
+</section>
+</div>
+</section>
+</main>
+</body>
+</html>

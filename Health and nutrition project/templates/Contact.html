@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+</head>
+<style>
+    body{font-family:Arial,Helvetica,Sans-serif;}
+
+    .navbar a{float:right;padding:12px;color:rgb(235, 74, 74);text-decoration:none;font-size:17px;}
+
+.navbar a:hover{background-color:hsl(0, 17%, 15%);}
+
+.active{background-color:#e0bd0f;}
+
+
+@media screen and(max-width:500px){.navbar a{float:none;display:block}}
+    
+  </style>
+      
+  <body>
+    <div class="navbar">
+      <p><a href="{{ url_for('signup') }}">Signup</a></p>
+      <p><a href="{{ url_for('Home') }}">Home</a></p> 
+      <p><a href="{{ url_for('login') }}">Login</a></p>
+      <p><a href="{{ url_for('Recipes') }}">Recipes</a></p>
+      <p><a href="{{ url_for('Search') }}">Search</a></p> 
+      <p><a href="{{ url_for('Contact') }}">Contact</a></p>
+       
+      
+      
+    </div>
+  </body>
+  
+    <!-- banner section  -->
+    <section class="banner">
+        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png"
+            alt="Welcome to our Contact Us page">
+        <h1>Get in Touch With Us</h1>
+        <p>We're here to answer any questions you may have.</p><br><br>
+    </section>
+ 
+    <!-- Company contact info -->
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <address>
+            Phone: <a href="tel:6301897838">630-189-7838</a><br><br>
+            Phone: <a href="tel:9095734532">909-573-4532</a><br><br>
+            Phone: <a href="tel:9515772328">951-577-2328</a><br><br>
+            Email: <a href="anjalisaidu@gmail.com">anjalisaidu@gmail.com,</a><br><br>
+            Email: <a href="monikamanda@gmail.com">monikamanda@gmail.com</a><br><br>
+            Email: <a href="sravyamullapudi@gmail.com">sravyamullapudi@gmail.com</a><br><br>
+        </address>
+    </section>
+
+</body>
+ 
+</html>
